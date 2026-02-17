@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moabe Lima | Terapeuta TRG</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1e293b;
+            --accent: #8fb3a4;
+            --bg-light: #f8fafc;
+            --glass: rgba(255, 255, 255, 0.7);
+            --text-dark: #0f172a;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Outfit', sans-serif; }
+        
+        body { 
+            color: var(--text-dark); 
+            background-color: var(--bg-light);
+            background-image: radial-gradient(#8fb3a433 1px, transparent 1px);
+            background-size: 40px 40px;
+            scroll-behavior: smooth;
+        }
+
+        section { padding: 100px 10%; position: relative; }
+
+        h1, h2, h3 { color: var(--primary); font-weight: 700; }
+
+        .btn {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 18px 40px;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            box-shadow: 0 10px 20px -5px rgba(143, 179, 164, 0.5);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.2);
+            cursor: pointer;
+        }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 15px 25px -5px rgba(143, 179, 164, 0.6); }
+
+        #hero { 
+            display: flex; 
+            align-items: center; 
+            min-height: 100vh; 
+            background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+            gap: 50px;
+        }
+        .hero-content { flex: 1; }
+        .hero-content h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; text-transform: uppercase; }
+        
+        .hero-img { flex: 1; position: relative; text-align: center; }
+        .hero-img img { 
+            width: 100%; 
+            max-width: 450px; 
+            border-radius: 40px; 
+            box-shadow: 0 30px 60px -12px rgba(0,0,0,0.2);
+        }
+
+        .grid-cards { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 25px; 
+            margin-top: 50px; 
+        }
+        .card { 
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            padding: 40px; 
+            border-radius: 24px; 
+            border: 1px solid rgba(255,255,255,0.5);
+            transition: 0.3s;
+        }
+        .card:hover { transform: translateY(-10px); background: white; }
+        .card i { font-size: 2rem; color: var(--accent); margin-bottom: 20px; display: block; }
+
+        #como-funciona { background: var(--primary); color: white; border-radius: 50px 50px 0 0; }
+        #como-funciona h2 { color: white; text-align: center; margin-bottom: 50px; }
+        .steps-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; }
+        .step { text-align: center; }
+        .step-num { font-size: 4rem; font-weight: 800; opacity: 0.2; display: block; margin-bottom: -30px; }
+
+        #cta { text-align: center; padding: 120px 10%; }
+
+        @media (max-width: 992px) {
+            #hero { flex-direction: column-reverse; text-align: center; padding-top: 80px; }
+            .hero-content h1 { font-size: 2.5rem; }
+            section { padding: 60px 5%; }
+        }
+    </style>
+</head>
+<body>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Reprograme suas <br><span style="color: var(--accent)">emoções.</span></h1>
+            <h2>Volte a viver com leveza.</h2>
+            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 30px; margin-top: 20px;">Terapia TRG online para ansiedade, traumas, bloqueios emocionais e padrões que se repetem.</p>
+            <p style="margin-bottom: 20px;"><i class="fa-solid fa-circle-check" style="color: var(--accent);"></i> Atendimento para todo o Brasil</p>
+            <a href="https://wa.me/5562995622286?text=Olá%20Moabe,%20vi%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20terapia%20TRG." class="btn">Agendar minha consulta</a>
+        </div>
+        <div class="hero-img">
+            <img src="moabe.jpg" alt="Moabe Lima Terapeuta">
+        </div>
+    </section>
+
+    <section id="dor">
+        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+            <span style="text-transform: uppercase; letter-spacing: 2px; color: var(--accent); font-weight: 600;">O primeiro passo</span>
+            <h2 style="font-size: 2.5rem; margin: 15px 0;">Sua mente nunca descansa?</h2>
+            <p>Muitos sofrimentos não estão no presente, eles estão registrados na sua memória emocional. A TRG ajuda você a libertar-se desses pesos.</p>
+        </div>
+        <div class="grid-cards">
+            <div class="card">
+                <i class="fa-solid fa-brain"></i>
+                <h3>Mente acelerada</h3>
+                <p>A ansiedade aparece sem motivo claro e você sente que perdeu o controle.</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-anchor"></i>
+                <h3>Passado presente</h3>
+                <p>Traumas e situações antigas que ainda machucam como se fossem hoje.</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-battery-quarter"></i>
+                <h3>Cansaço Crônico</h3>
+                <p>Um esgotamento que afeta seu sono, trabalho e suas relações pessoais.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="trg" style="background: white;">
+        <div style="display: flex; align-items: center; gap: 50px; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 300px;">
+                <h2 style="font-size: 2.2rem;">O Método TRG</h2>
+                <p style="margin: 20px 0;">A Terapia de Reprocessamento Generativo é focada em resultados rápidos, atuando na raiz emocional do problema através de protocolos estruturados:</p>
+                <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                    <span style="background: #e2e8f0; padding: 8px 15px; border-radius: 8px; font-size: 0.9rem;">Cronológico</span>
+                    <span style="background: #e2e8f0; padding: 8px 15px; border-radius: 8px; font-size: 0.9rem;">Somático</span>
+                    <span style="background: #e2e8f0; padding: 8px 15px; border-radius: 8px; font-size: 0.9rem;">Temático</span>
+                    <span style="background: #e2e8f0; padding: 8px 15px; border-radius: 8px; font-size: 0.9rem;">Futuro</span>
+                </div>
+            </div>
+            <div style="flex: 1; min-width: 300px; background: var(--bg-light); padding: 40px; border-radius: 30px;">
+                <h3 style="margin-bottom: 20px;">Benefícios</h3>
+                <ul style="list-style: none;">
+                    <li style="margin-bottom: 12px;"><i class="fa-solid fa-check" style="color: var(--accent);"></i> Redução de gatilhos emocionais</li>
+                    <li style="margin-bottom: 12px;"><i class="fa-solid fa-check" style="color: var(--accent);"></i> Mais clareza para tomar decisões</li>
+                    <li style="margin-bottom: 12px;"><i class="fa-solid fa-check" style="color: var(--accent);"></i> Noites de sono mais tranquilas</li>
+                    <li><i class="fa-solid fa-check" style="color: var(--accent);"></i> Autoconfiança restaurada</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="como-funciona">
+        <h2>Como funciona o atendimento?</h2>
+        <div class="steps-container">
+            <div class="step">
+                <span class="step-num">01</span>
+                <h3>Contato</h3>
+                <p>Agende sua sessão inicial pelo WhatsApp de forma rápida.</p>
+            </div>
+            <div class="step">
+                <span class="step-num">02</span>
+                <h3>Sessão Online</h3>
+                <p>Conecte-se de onde estiver via chamada de vídeo segura.</p>
+            </div>
+            <div class="step">
+                <span class="step-num">03</span>
+                <h3>Processo</h3>
+                <p>Iniciamos os protocolos de reprocessamento das memórias.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="cta">
+        <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Dê o primeiro passo hoje.</h2>
+        <p style="margin-bottom: 40px; font-size: 1.2rem; opacity: 0.8;">A sua saúde emocional é a sua prioridade mais urgente.</p>
+        <a href="https://wa.me/5562995622286?text=Olá%20Moabe,%20vi%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20terapia%20TRG." class="btn" style="padding: 25px 60px; font-size: 1.3rem;">Quero marcar minha consulta</a>
+        <div style="margin-top: 50px; color: #64748b;">
+            <p><i class="fa-solid fa-user-shield"></i> Atendimento 100% Sigiloso</p>
+            <p style="font-size: 0.9rem; margin-top: 10px;">Moabe Lima | Terapeuta TRG</p>
+        </div>
+    </section>
+
+</body>
+</html>
