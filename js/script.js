@@ -1,4 +1,8 @@
 
+    
+    
+    document.getElementById("ano").textContent = new Date().getFullYear();
+
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
     n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -9,3 +13,4 @@
     'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', 'SEU_PIXEL_AQUI');
     fbq('track', 'PageView');
+    
