@@ -68,13 +68,15 @@ section { padding: 80px 10%; position: relative; }
     background-attachment: fixed; background-position: left; background-repeat: no-repeat;
     background-size: 32% auto; background-color: var(--primary);
     background-image: linear-gradient(to right, rgba(30, 41, 59, 0.2), var(--primary));
-    padding: 50px 5%;display: flex; justify-content: flex-end; align-items: center; min-height: 80vh;
+    padding: 50px 5%; display: flex; justify-content: flex-end; align-items: center; min-height: 80vh;
 }
 
 .sobre-parallax.invertido {
     background-position: right;
-    background-image: linear-gradient(to left, rgba(30, 41, 59, 0.2), var(--primary));
-    justify-content: flex-start;
+    background-image: linear-gradient(to left, rgba(30, 41, 59, 0.2), var(--primary)), url('../img/trg_1.jpg');
+    justify-content: flex-start; position: relative; background-attachment: fixed; background-repeat: no-repeat;    
+    background-size: 32% auto; background-color: var(--primary); padding: 50px 5%; display: flex; align-items: center;
+    min-height: 80vh;
 }
 
 .sobre-content-glass {
@@ -219,4 +221,5 @@ section { padding: 80px 10%; position: relative; }
  /* FAQ */
         .faq-item { margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #e2e8f0; }
         .faq-item i { color: var(--accent); margin-right: 10px; }
+
 
