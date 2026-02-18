@@ -66,9 +66,9 @@ section { padding: 80px 10%; position: relative; }
 /* PARALLAX SECTIONS */
 .sobre-parallax {
     background-attachment: fixed; background-position: left; background-repeat: no-repeat;
-    background-size: 35% auto; background-color: var(--primary);
+    background-size: 32% auto; background-color: var(--primary);
     background-image: linear-gradient(to right, rgba(30, 41, 59, 0.2), var(--primary));
-    display: flex; justify-content: flex-end; align-items: center; min-height: 80vh;
+    padding: 50px 5%;display: flex; justify-content: flex-end; align-items: center; min-height: 80vh;
 }
 
 .sobre-parallax.invertido {
@@ -219,3 +219,4 @@ section { padding: 80px 10%; position: relative; }
  /* FAQ */
         .faq-item { margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #e2e8f0; }
         .faq-item i { color: var(--accent); margin-right: 10px; }
+
