@@ -1,16 +1,53 @@
+/**
+ * Script de Controle - Website Moabe Lima
+ * Focado em Performance e UX
+ */
 
+document.addEventListener('DOMContentLoaded', () => {
     
-    
-    document.getElementById("ano").textContent = new Date().getFullYear();
+    // 1. Atualizar Ano do Rodapé automaticamente
+    const anoElement = document.getElementById("ano");
+    if(anoElement) anoElement.textContent = new Date().getFullYear();
 
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', 'SEU_PIXEL_AQUI');
-    fbq('track', 'PageView');
-    
+    // 2. Intersection Observer (Scroll Reveal)
+    // Faz os elementos aparecerem suavemente ao rolar a página
+    const observerOptions = {
+        threshold: 0.15, // Ativa quando 15% do elemento aparece
+        rootMargin: "0px 0px -50px 0px"
+    };
+
+    const revealCallback = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                // Opcional: para de observar após animar uma vez
+                // observer.unobserve(entry.target);
+            }
+        });
+    };
+
+    const observer = new IntersectionObserver(revealCallback, observerOptions);
+
+    // Seleciona todos os elementos que devem "revelar"
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // 3. Efeito Parallax Suave na Imagem do Hero
+    window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        const heroImg = document.querySelector('.hero-float');
+        if(heroImg) {
+            heroImg.style.transform = `translateY(${scrolled * 0.1}px) rotate(${scrolled * 0.01}deg)`;
+        }
+    });
+
+    // 4. Smooth Scroll para links internos
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+});
